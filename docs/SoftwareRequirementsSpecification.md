@@ -1,3 +1,22 @@
+# 2. Overall Description
+## 2.1 Vision
+
+The corona pandemic caused reduced personal contact with our fellow human beings. That is why we have set ourselves the goal of reuniting people in times of isolation. 
+
+Common enables the exchange of “common” topics through a chatportal. This will be set up in a web application. The user chooses their preferred topic of conversation using an input option that allows them to define their topic of interest. Users with the same interests are matched by a random system and can exchange via a chat.
+
+### 2.2 Use Case Diagram
+
+### 2.3 Technology Stack
+
+The technology we use is:
+Backend: -SpringFramework
+Frontend: tbd
+IDE: -IntelliJ
+Project Management: -Jira -GitHub -Discord
+Deployment: -Java
+Testing: tbd
+
 # 3. Specific Requirements
 ## 3.1 Functionality
 
