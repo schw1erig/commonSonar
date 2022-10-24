@@ -1,3 +1,43 @@
+# 1. Introduction
+## 1.1 Purpose
+This Software Requirements Specification (SRS) describes functional and non-functional requirements for the application "Common". It includes an overview about this project and its vision, detailed information about the planned features and boundary conditions of the development process. It also describes the correctness, uniqueness, and completeness of our project.
+
+## 1.2 Scope
+The project is going to be realized as a Web Application (Web-App).
+
+Actors of the Web Site are the Users.
+
+Planned Subsystems are:
+  -	User interface:  
+    The user interface is a website with chat room. 
+  -	Account System:  
+    we don’t have an Account System. Users choose with each new application a username and a topic.   
+  -	Block a User:  
+    During a Session a User can block another User.
+  -	Connecting People:  
+    After two User choose the same topic in the web application, they get connected and start to chat together. User can also quit a chat. 
+  -	Storing Data:  
+    The Data are stored just temporary during a chat. After user quit a chat, the data also get lost. 
+
+## 1.3 Definitions, 
+Acronyms and Abbreviations  
+Abbrevation ------- Explanation  
+SRS ---------------- Software Requirements Specification  
+UC ----------------- Use Case  
+Web-App ---------- Web-Applikation  
+UCD ---------------- Overall Use Case Diagram  
+tbd ----------------- To be determined  
+FAQ ----------------- Frequently asked Questions  
+
+## 1.4 References
+Title	------------------------- Date	--------- Publishing organization  
+Common Blog (Disord) ---- 13.10.2022	--- Common Team  
+GitHub ----------------------13.10.2022	--- Common Team
+
+## 1.5 Overview
+The following chapter provides an overview of this project with vision and Overall Use Case Diagram (UCD). The third chapter (Requirements Specification) delivers more details about the specific requirements in terms of functionality, usability, and design parameters. Finally, there is a chapter with supporting information.
+
+
 # 2. Overall Description
 ## 2.1 Vision
 
