@@ -7,15 +7,31 @@ Common enables the exchange of “common” topics through a chatportal. This wi
 
 ### 2.2 Use Case Diagram
 
+![Use Case Diagram](images/SoftwareRequirementsSpecification.png)
+
 ### 2.3 Technology Stack
 
 The technology we use is:
-Backend: -SpringFramework
-Frontend: tbd
-IDE: -IntelliJ
-Project Management: -Jira -GitHub -Discord
-Deployment: -Java
-Testing: tbd
+Backend:
+* SpringFramework
+
+Frontend:
+* tbd
+
+IDE:
+* IntelliJ
+
+Project Management:
+* Jira
+* GitHub
+* Discord
+
+Deployment:
+* Java
+
+Testing:
+* tbd
+
 
 # 3. Specific Requirements
 ## 3.1 Functionality
