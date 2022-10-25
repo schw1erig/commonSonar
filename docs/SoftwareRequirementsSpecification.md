@@ -114,13 +114,13 @@ Due to the simplicity and design decisions made, our Web Service will be practic
 The Ui has a very simple design. The thought is that the user feels a sense of familiarity with other known webservices.
 This will spare the user the hassle of trying to find simple functions since it will be intuitive.
 
-3.3 Reliability
+## 3.3 Reliability
 
 3.3.1 Availability
 
 Load balancing and redundancy can be achieved using services like traefik, although this is not mandatory for this project.
 
-3.4 Performance
+## 3.4 Performance
 
 3.4.1 Capacity
 
@@ -144,3 +144,46 @@ Unit tests will be written to ensure system stability.
 
 Back-End and Front-End will be kept separately. The Back-End will provide a RESTful API which the Front-End can use to communicate with the Back-End.
 The Back-End will provide data using the JSON format. The RESTful API will not be exposed to the public internet, but will rather be kept in an internal network. This will provide an additional security layer against attackers.
+
+## 3.7 On-line User Documentation and Help System Requirements
+
+The usage of the app should be as intuitive as possible so it won't need any further documentation. If the user needs some help we will implement a "Help"-Button in the App which includes a FAQ and a formular to contact the developement team.
+
+## 3.8 Interfaces
+
+3.8.1 User Interfaces
+
+The User interfaces we will implement:
+* Dashboard - Adds the possibility to set a name and choose a topic the user wants to talk about.
+* Chat Page - Shows information about the session and a chat window.
+* Settings - Shows the settings
+
+3.8.2 Software Interfaces
+
+The application will be available as a website with primary focus on desktop users.
+
+3.8.3 Communication Interfaces
+
+The users can communicate with the webpage using the http/https protocol.
+
+## 3.9 Licensing Requirements
+
+tbd
+
+## 3.10 Legal, Copyright, and Other Notices
+
+The logo is licensed to the Common Team and is only allowed to use for the application. We do not take responsibility for any incorrect data or errors in the application.
+
+## 3.11 Applicable Standards
+
+The development will follow the common clean code standards and naming conventions.
+
+## 4. Supporting Information
+
+For any further information you can contact the Common Team via Discord Common Blog.
+The Team Members are:
+* Leon Schoch
+* Erika Frank
+* Lea Schablack
+* Emina Yilmaz
+* Christian Misch
