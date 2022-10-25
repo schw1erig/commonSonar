@@ -104,3 +104,43 @@ Once the session has been terminated, the users will both respectively be droppe
 If one of the opposing partners is going against our user guidelines, the user has the option to report the user.
 Should this happen, the IP address of the opposing partner and the IP address of the user will be logged, and ensured that a match between those partners can no longer happen.
 The session will be terminated.
+
+## 3.2 Usability
+
+Due to the simplicity and design decisions made, our Web Service will be practically self-explanatory.
+
+3.2.1 User friendliness
+
+The Ui has a very simple design. The thought is that the user feels a sense of familiarity with other known webservices.
+This will spare the user the hassle of trying to find simple functions since it will be intuitive.
+
+3.3 Reliability
+
+3.3.1 Availability
+
+Load balancing and redundancy can be achieved using services like traefik, although this is not mandatory for this project.
+
+3.4 Performance
+
+3.4.1 Capacity
+
+The System should be able to manage thousands of requests. Perhaps even more, if we can achieve to optimise the database connection.
+
+3.4.2 Storage
+
+Storage requirements are very small since no data will be kept long term except for reported IP addresses.
+
+## 3.5 Supportability
+
+3.5.1 Coding standards
+
+We will be using modern coding standards. This will ensure that the team and future developers have an easier time understanding the code and providing future functionality.
+
+3.5.2 Testing
+
+Unit tests will be written to ensure system stability.
+
+## 3.6 Design constraints
+
+Back-End and Front-End will be kept separately. The Back-End will provide a RESTful API which the Front-End can use to communicate with the Back-End.
+The Back-End will provide data using the JSON format. The RESTful API will not be exposed to the public internet, but will rather be kept in an internal network. This will provide an additional security layer against attackers.
