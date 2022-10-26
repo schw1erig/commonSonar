@@ -19,20 +19,21 @@ Planned Subsystems are:
   -	Storing Data:  
     The Data are stored just temporary during a chat. After user quit a chat, the data also get lost. 
 
-## 1.3 Definitions, 
-Acronyms and Abbreviations  
-Abbrevation ------- Explanation  
-SRS ---------------- Software Requirements Specification  
-UC ----------------- Use Case  
-Web-App ---------- Web-Applikation  
-UCD ---------------- Overall Use Case Diagram  
-tbd ----------------- To be determined  
-FAQ ----------------- Frequently asked Questions  
+## 1.3 Definitions
+| Abbreviation | Explanation                         |
+|--------------|-------------------------------------|
+| SRS          | Software Requrements Specification  |
+| UC           | Use Case                            |
+| Web-App      | Web-Application                     |
+| UCD          | Use Case Diagram                    |
+| tbd          | to be determined                    |
+| FAQ          | Frequently asked questions          |
 
 ## 1.4 References
-Title	------------------------- Date	--------- Publishing organization  
-Common Blog (Disord) ---- 13.10.2022	--- Common Team  
-GitHub ----------------------13.10.2022	--- Common Team
+| Title                                         | Date        | Publishing organization |
+|-----------------------------------------------|-------------|-------------------------|
+| Common Blog (Discord)                         | 13.10.2022	 | Common Team             |
+| [GitHub](https://github.com/DarkressX/Common) | 13.10.2022  | Common Team             |
 
 ## 1.5 Overview
 The following chapter provides an overview of this project with vision and Overall Use Case Diagram (UCD). The third chapter (Requirements Specification) delivers more details about the specific requirements in terms of functionality, usability, and design parameters. Finally, there is a chapter with supporting information.
