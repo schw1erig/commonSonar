@@ -30,10 +30,10 @@ Planned Subsystems are:
 | FAQ          | Frequently asked questions          |
 
 ## 1.4 References
-| Title                                         | Date        | Publishing organization |
-|-----------------------------------------------|-------------|-------------------------|
-| Common Blog (Discord)                         | 13.10.2022	 | Common Team             |
-| [GitHub](https://github.com/DarkressX/Common) | 13.10.2022  | Common Team             |
+| Title                                         | Date        | Publishing organization  |
+|-----------------------------------------------|-------------|--------------------------|
+| [Common Blog](https://blog.common-chat.de/)   | 13.10.2022	 | Common Team              |
+| [GitHub](https://github.com/DarkressX/Common) | 13.10.2022  | Common Team              |
 
 ## 1.5 Overview
 The following chapter provides an overview of this project with vision and Overall Use Case Diagram (UCD). The third chapter (Requirements Specification) delivers more details about the specific requirements in terms of functionality, usability, and design parameters. Finally, there is a chapter with supporting information.
