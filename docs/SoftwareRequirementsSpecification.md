@@ -5,7 +5,7 @@ This Software Requirements Specification (SRS) describes functional and non-func
 ## 1.2 Scope
 The project is going to be realized as a Web Application (Web-App).
 
-Actors of the Web Site are the Users.
+Actors of the Website are the Users.
 
 Planned Subsystems are:
   -	User interface:  
@@ -84,7 +84,7 @@ This section will explain the different use cases, you could see in the Use Case
 * 3.1.3 Quit chat/disconnect
 * 3.1.4 Block another user
 
-3.1.1 Choose username / Choose topic text
+3.1.1 [Choose username / Choose topic text](/docs/use_cases/ChooseUsernameAndTopic.md)
 
 This will be the beginning for every interaction on our platform.
 The user will be able to choose a username which will be visible to the chat partner, once a successful match has been made.
