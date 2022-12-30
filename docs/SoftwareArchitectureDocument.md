@@ -36,7 +36,7 @@ As a framework we have chosen to use Spring. Spring allows for a streamlined dev
 
 # 4. Use-Case View
 
-![Use Case Diagram](/docs/use_cases/images/SoftwareRequirementsSpecification.png)
+![Use Case Diagram](/docs/use_case_diagram/UseCaseDiagram.png)
 
 Use-Case Realizations:
 

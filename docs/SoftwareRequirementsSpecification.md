@@ -46,7 +46,7 @@ Common enables the exchange of “common” topics through a chatportal. This wi
 
 ### 2.2 Use Case Diagram
 
-![Use Case Diagram](/docs/use_cases/images/SoftwareRequirementsSpecification.png)
+![Use Case Diagram](/docs/use_case_diagram/UseCaseDiagram.png)
 
 ### 2.3 Technology Stack
 
