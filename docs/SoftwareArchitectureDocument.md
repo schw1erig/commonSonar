@@ -5,6 +5,8 @@ This document provides a comprehensive architectural overview of the system, usi
 
 ## 1.2 Scope
 
+This document should give the reader an insight of our various priorities and focuses, their design choices and how we plan to implement them.
+
 ## 1.3 Definitions, Acronyms, Abbreviations
 
 | Abbreviation | Explanation                   |
@@ -13,6 +15,8 @@ This document provides a comprehensive architectural overview of the system, usi
 | TLS          | Transport Layer Security      |
 
 ## 1.4 References
+
+This document does not use external references. Every link in this document is at most a link to another document within the same project.
 
 ## 1.5 Overview
 
@@ -42,11 +46,9 @@ Use-Case Realizations:
 
 # 5. Logical View
 
-![ClassDiagram](/docs/class_diagrams/class_diagram_backend.png)
-
 ## 5.1 Overview
 
-## 5.2 Architecturally Significant Design Packages
+![ClassDiagram](/docs/class_diagrams/class_diagram_backend.png)
 
 # 6. Process View
 
@@ -67,14 +69,16 @@ This server has debian 11 as its host OS installed. The application will then be
 
 ![ComponentDiagram](/docs/component_diagrams/ComponentDiagram.png)
 
-## 8.2 Layers
-
 # 9. Data View
 
 Only personal data is saved in our database. Personal data means the data to create an account for example email address and password.  
 Data that is shared in the chat is lost after leaving.
 
 # 10. Size and Performance
+
+The performance heavily depends on the amount of users which are currently using the platform.
+The general consensus being: The more users, the slower the platform gets.
+Since the underlying server has a great performance capability, we expect to be able to handle at least 1000 users simultaneously.
 
 # 11. Quality
 
