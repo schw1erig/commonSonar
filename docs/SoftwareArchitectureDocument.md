@@ -56,6 +56,11 @@ As you can see from our diagram, we have four processes here. The authentication
 
 # 7. Deployment View
 
+Here you can see our deployment diagram. Our application will eventually be deployed to a netcup server.
+This server has debian 11 as its host OS installed. The application will then be running inside a docker container on this server.
+
+![DeploymentDiagram](/docs/deployment_diagrams/DeploymentDiagram.png)
+
 # 8. Implementation View
 
 ## 8.1 Overview
