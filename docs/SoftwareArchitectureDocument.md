@@ -38,7 +38,12 @@ As a framework we have chosen to use Spring. Spring allows for a streamlined dev
 
 ![Use Case Diagram](/docs/use_case_diagram/UseCaseDiagram.png)
 
-Use-Case Realizations:
+A use-case view bundles all possible scenarios that can occur when an actor tries to achieve a certain technical goal. So one of the scenarios is after a user is logged in, he can start a chat. To do this, he can enter a topic, a name or select one previously available, which is displayed.
+Other user interactions include the possibility to end a chat, block and report another user. If a user is not yet logged in, he has the possibility to create an account, if he does not have one yet. He can then log in, log out or change the settings.
+The administrators can ban, unban other users or delete accounts.
+For our project it is important that the users can create an account and log in or out. Furthermore, the possibility to start a chat and the chat itself, so these were particularly highlighted.
+
+
 
 [CreateAccount](/docs/use_cases/UseCaseRealizationSpecifiaction/CreateAccount.md)
 

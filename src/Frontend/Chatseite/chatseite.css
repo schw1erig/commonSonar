@@ -82,6 +82,7 @@ footer {
   background: gray;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 footer > h1 {
