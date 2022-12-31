@@ -25,7 +25,7 @@ Planned Subsystems are:
 ## 1.3 Definitions
 Important terms that are used in this document you can find in our glossary:
 
-[Glossary](https://github.com/DarkressX/Common/blob/main/docs/Glossary)
+[Glossary](https://github.com/DarkressX/Common/blob/main/docs/Glossary.md)
 
 ## 1.4 References
 | Title                                         | Date        | Publishing organization  |

@@ -2,7 +2,7 @@
 |-----------------------------|---------------------------------------|
 | ASR                         | Architecture Significant Requirements |
 | API                         | Application programming interface     |
-| Ddos                        | Distributed Denial-of-Service         |
+| DDoS                        | Distributed Denial-of-Service         |
 | FAQ                         | Frequently asked questions            |
 | HTTP	                       | Hypertext transfer protocol           |
 | JSON	                       | JavaScript Object Notation            |
