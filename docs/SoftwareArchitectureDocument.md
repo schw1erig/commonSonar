@@ -9,10 +9,9 @@ This document should give the reader an insight of our various priorities and fo
 
 ## 1.3 Definitions, Acronyms, Abbreviations
 
-| Abbreviation | Explanation                   |
-|--------------|-------------------------------|
-| DDoS         | Distributed Denial of Service |
-| TLS          | Transport Layer Security      |
+Important terms that are used in this document you can find in our glossary:
+
+[Glossary](https://github.com/DarkressX/Common/blob/main/docs/Glossary.md)
 
 ## 1.4 References
 
