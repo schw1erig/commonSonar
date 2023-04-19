@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="unauthenticated/css/common.css">
+    <title>Common</title>
+    <script defer src="unauthenticated/js/login.js"></script>
+</head>
+<body>
+<form name="f" th:action="@{/login}" method="post" class="form-signin">
+    <div th:if="${param.error}" class="alert alert-danger">
+        Invalid username and password.
+    </div>
+    <div th:if="${param.logout}" class="alert alert-success">
+        You have been logged out.
+    </div>
+    <p><input type="text" id="username" name="username" class="form-control" placeholder="Username" required="true" /></p>
+    <p><input type="password" id="password" name="password" class="form-control" placeholder="Password" required="true" /></p>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+</form>
+
+
+</body>
+</html>
