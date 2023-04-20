@@ -40,7 +40,6 @@ public class SecurityConfig
     {
 
         http.csrf().disable();
-        //http.sessionManagement().sessionCreationPolicy(STATELESS);
         http.authorizeRequests().antMatchers(GET,"/").permitAll();
         //http.authorizeRequests().antMatchers(GET, "/homepage*").authenticated();
         http.authorizeRequests().antMatchers("/login*").permitAll();

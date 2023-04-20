@@ -1,30 +1,14 @@
 package org.common.common.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.common.common.model.Role;
-import org.common.common.model.User;
+import org.common.common.model.ApplicationUser;
 import org.common.common.service.UserService;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.net.URI;
-import java.util.*;
-import java.util.stream.Collectors;
-
-import static java.util.Arrays.stream;
-import static org.springframework.http.HttpHeaders.AUTHORIZATION;
-import static org.springframework.http.HttpStatus.FORBIDDEN;
-import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
+import java.util.List;
 
 @CrossOrigin("*")
 @RequestMapping("/api")
@@ -40,13 +24,13 @@ public class UserController
     }
 
     @GetMapping("/users")
-    public ResponseEntity<List<User>>getUsers()
+    public ResponseEntity<List<ApplicationUser>>getUsers()
     {
         return ResponseEntity.ok().body(userService.getUsers());
     }
 
     @PostMapping("/user/save")
-    public ResponseEntity<User>saveUser(@RequestBody User user)
+    public ResponseEntity<ApplicationUser>saveUser(@RequestBody ApplicationUser user)
     {
         URI uri = URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/user/save").toUriString()); //get url
         try{
@@ -55,52 +39,12 @@ public class UserController
                 return ResponseEntity.badRequest().body(user);
             }
         } catch(NullPointerException e) {
+            user.setRole(ApplicationUser.Role.USER);
             return ResponseEntity.created(uri).body(userService.saveUser(user));
         }
 
-        return ResponseEntity.badRequest().build(); //This should not be necessary but Java does not know this and throws an error
-    }
-
-    @PostMapping("/role/save")
-    public ResponseEntity<Role>saveRole(@RequestBody Role role)
-    {
-        URI uri = URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/role/save").toUriString()); //get url
-        return ResponseEntity.created(uri).body(userService.saveRole(role));
-    }
-
-    @PostMapping("/role/addtouser")
-    public ResponseEntity<?>addRoleToUser(@RequestBody RoleToUserForm form)
-    {
-        userService.addRoleToUser(form.getUsername(), form.getRoleName());
-        return ResponseEntity.ok().build();
+        return ResponseEntity.badRequest().build();
     }
 
 }
 
-class RoleToUserForm
-{
-    private String username;
-    private String roleName;
-
-    public String getUsername()
-    {
-        return username;
-    }
-
-    public void setUsername(String username)
-    {
-        this.username = username;
-    }
-
-    public String getRoleName()
-    {
-        return roleName;
-    }
-
-    public void setRoleName(String roleName)
-    {
-        this.roleName = roleName;
-    }
-
-
-}
