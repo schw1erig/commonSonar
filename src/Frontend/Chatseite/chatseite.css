@@ -15,7 +15,9 @@ body {
   font-family: 'Lato';
   font-weight: 300;
   background: no-repeat url('hintergrund.png');
-  background-size: cover;
+  background-size: 100% 100%;
+  background-position: 0% 0%;
+  margin: 0 auto;
 }
 
 .main {
@@ -29,6 +31,8 @@ body {
 
 .logo {
   background: no-repeat url('commonlogo3.png');
+  background-size: 100% 100%;
+  background-position: 0% 0%;
   margin: 0 auto;
   top: 0;
   width: 60%;
@@ -48,6 +52,7 @@ body {
   overflow: auto;
 }
 
+
 .msg {
   margin-bottom: 1em;
   padding: 10px;
@@ -56,7 +61,7 @@ body {
 }
 
 .chatbox > .left {
-  background: rgba(125, 125, 125, 0.6);
+  background: rgba(255, 255, 255, 1);
   align-self: flex-start;
 }
 
@@ -66,23 +71,35 @@ body {
 }
 
 .chatinput {
-  background: rgba(255, 255, 255, 1);
-  margin: 0 auto;
+  background: rgb(252, 252, 252);
+  margin: center;
   padding: 1em;
   border-radius: 10px;
   width: 50%;
   height: 1em;
+  margin-left: 20%;
 }
+
+.sendbtn {
+  background: rgba(97, 12, 131, 0.753);
+  margin: 0 auto;
+  top: 50%;
+  width: 145px;
+  height: 2.5rem;
+  border-radius: 10px;
+  padding: 0.5em 1.5em 0.5em 1.5em;
+  font-size: 20px;
+}
+
 
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 5em;
+  height: 5%;
   background: gray;
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
 }
 
 footer > h1 {
