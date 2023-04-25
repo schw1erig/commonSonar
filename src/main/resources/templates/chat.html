@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8" />
+
+    <title>Common</title>
+    <meta name="description" content="Common" />
+    <link rel="stylesheet" href="unauthenticated/css/chatseite.css" />
 </head>
 <body>
+<div class="body">
+</div>
+<div class="main">
+    <div id="logo" class="logo"></div>
+    <div id="chatbox" class="chatbox">
+        <div class="msg left">Message 1 döjhnsak salkdj sjd öla lakj dslalk</div>
+    </div>
 
+    <div class="input">
+        <input id="chatinput" class="chatinput" type="text" />
+        <button class="sendbtn"onclick="send()">Senden!</button>
+    </div>
+
+    <footer>
+        <h1>Connected with: Max Mustermann</h1>
+        <button>Report :(</button>
+
+    </footer>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    // jQuery Document
+    $(document).ready(function () {});
+</script>
 </body>
+
+<script>
+    function send() {
+        var msg = document.getElementById('chatinput').value;
+        document.getElementById('chatinput').value = '';
+        document.getElementById('chatbox').innerHTML += "<div class='msg right'>" + msg + '</div>';
+    }
+</script>
 </html>
