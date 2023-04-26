@@ -33,17 +33,15 @@ public class UserController
     public ResponseEntity<ApplicationUser>saveUser(@RequestBody ApplicationUser user)
     {
         URI uri = URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/user/save").toUriString()); //get url
-        try{
-            if(userService.getUser(user.getUsername()).getUsername().equals(user.getUsername()))
-            {
-                return ResponseEntity.badRequest().body(user);
-            }
-        } catch(NullPointerException e) {
+        String registerUsername = user.getUsername();
+
+        if (userService.getUser(registerUsername) == null) {
             user.setRole(ApplicationUser.Role.USER);
             return ResponseEntity.created(uri).body(userService.saveUser(user));
+        } else {
+            System.out.println("User already exists");
+            return ResponseEntity.badRequest().build();
         }
-
-        return ResponseEntity.badRequest().build();
     }
 
 }

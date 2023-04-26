@@ -38,7 +38,13 @@ public class UserService {
     public ApplicationUser getUser(String username)
     {
         log.info("Fetching user {}", username);
-        return repo.findByUsername(username);
+        try {
+            return repo.findByUsername(username);
+        }
+        catch (Exception e) {
+            System.out.println(e);
+            return null;
+        }
     }
 
     //@Override
