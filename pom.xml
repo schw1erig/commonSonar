@@ -10,6 +10,7 @@
 	</parent>
 	<groupId>org.common</groupId>
 	<artifactId>common</artifactId>
+	<packaging>jar</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>common</name>
 	<description>Chat application</description>
@@ -82,5 +83,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

@@ -15,7 +15,7 @@ public class HomeController
         return "homepage";
     }
 
-    @RequestMapping(value="/chat", method= RequestMethod.GET)
+    @RequestMapping(value="/chatPortal", method= RequestMethod.GET)
     public String chat(@ModelAttribute("user") ApplicationUser user, Model model) {
         return "chat";
     }

@@ -51,7 +51,7 @@ public class SecurityConfig
         http.authenticationProvider(authenticationProvider());
         http.formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("/chat", true)
+                .defaultSuccessUrl("/chatPortal", true)
                 .permitAll()
                 .and()
                 .logout()

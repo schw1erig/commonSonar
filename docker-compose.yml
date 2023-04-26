@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  common:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    network_mode: host
+  mysql:
+    image: mariadb:10.5.13
+    container_name: mysql
+    volumes:
+      - common-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysql
+      - MYSQL_PASSWORD=mysql
+      - MYSQL_DATABASE=common
+      - MYSQL_USER=mysql
+
+volumes:
+  common-data: {}
