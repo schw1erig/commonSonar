@@ -4,14 +4,16 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    network_mode: host
+    networks:
+      default:
+    container_name: common
   mysql:
     image: mariadb:10.5.13
     container_name: mysql
     volumes:
       - common-data:/var/lib/mysql
-    ports:
-      - "3306:3306"
+    networks:
+      default:
     environment:
       - MYSQL_ROOT_PASSWORD=mysql
       - MYSQL_PASSWORD=mysql
@@ -20,3 +22,6 @@ services:
 
 volumes:
   common-data: {}
+
+networks:
+  default:
