@@ -43,6 +43,7 @@ public class SecurityConfig
         http.authorizeRequests().antMatchers(GET,"/").permitAll();
         //http.authorizeRequests().antMatchers(GET, "/homepage*").authenticated();
         http.authorizeRequests().antMatchers("/login*").permitAll();
+        http.authorizeRequests().antMatchers("/register").permitAll();
         http.authorizeRequests().antMatchers(GET,"/unauthenticated/**").permitAll();
         http.authorizeRequests().antMatchers(POST,"/api/user/save").permitAll();
         http.authorizeRequests().antMatchers(GET, "/api/user/**").hasAnyAuthority("ROLE_USER");

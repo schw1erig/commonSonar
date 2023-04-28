@@ -45,13 +45,12 @@ body {
   padding: 30px 30px;
   border-radius: 50px;
   width: 60%;
-  height: 35%;
+  max-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  overflow: auto;
+  overflow-y: scroll;
 }
-
 
 .msg {
   margin-bottom: 1em;
@@ -77,7 +76,6 @@ body {
 
 .chatinput {
   background: rgb(252, 252, 252);
-  margin: center;
   padding: 1em;
   border-radius: 10px;
   width: 50%;
@@ -86,45 +84,21 @@ body {
 }
 
 .sendbtn {
-  background: rgba(184, 17, 250, 0.397);
-  color: white;
-  margin: 0 auto;
-  top: 50%;
-  width: 15%;
-  height: 50px;
-  padding: 1em;
-  border-radius: 5px;
-  padding: 0.5em 1.5em 0.5em 1.5em;
+  height: 40%;
+  weight: 100%;
+  padding: 8px 8px;
+  background: #8950AC;
   font-size: 20px;
-  font-weight: 600;
-  font-size: 1.2em;
+  border-radius: 19px;
+  margin-bottom: 5%;
+  color: #FFFFFF;
 }
 
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 7%;
-  background: gray;
-  display: flex;
-  justify-content: space-between;
-}
-
-footer > h1 {
-  height: fit-content;
-  margin: auto 0 auto 1rem;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-footer > button {
-  height: 3rem;
-  margin: auto 3em auto 0;
-  background: rgba(255, 0, 0, 1);
-  border: none;
-  padding: 0.5em 1.5em 0.5em 1.5em;
-  border-radius: 15px;
-  color: white;
-  font-weight: 600;
-  font-size: 1.2em;
+img {
+  display: block;
+  max-width:50%;
+  max-height:15%;
+  width: auto;
+  height: auto;
+  margin: 5% auto auto auto;
 }

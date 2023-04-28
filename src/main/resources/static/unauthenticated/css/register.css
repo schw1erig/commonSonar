@@ -1,0 +1,86 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body
+{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    font-family: 'Lato';
+    font-weight: 300;
+    background: no-repeat url('../img/hintergrund.png');
+    background-size: 100% 100%;
+    background-position: 0% 0%;
+}
+
+.logo {
+    background: no-repeat url('../img/commonlogo3.png');
+    background-size: 100% 100%;
+    background-position: 0% 0%;
+    margin: 0 auto;
+    top: 0;
+    width: 60%;
+    height: 30%;
+}
+
+.login{
+    width: 50%;
+    overflow: hidden;
+    margin: auto;
+    padding: 80px;
+    background: #bbb9bb2c;
+    border-radius: 15px ;
+
+}
+
+label{
+    background: rgba(184, 17, 250, 0.397);
+    color: white;
+    font-weight: 600;
+    font-size: 1.2em;
+    border-radius: 5px;
+    padding: 1%;
+    margin-left: 40%;
+}
+
+label2{
+    background: rgba(184, 17, 250, 0.397);
+    color: white;
+    font-weight: 600;
+    font-size: 1.2em;
+    border-radius: 5px;
+    padding: 1%;
+    margin-left: 42%;
+}
+
+#log{
+    margin-left: 16%;
+    width: 65%;
+    height: 30px;
+    border: none;
+    padding-left: 7px;
+    border-radius: 5px;
+    background: rgba(184, 17, 250, 0.397);
+    color: white;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+span{
+    color: white;
+    font-size: 17px;
+}
+a{
+    float: left;
+    background-color: grey;
+}
+
+.fields{
+    margin-left: 15%;
+    width: 65%;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
