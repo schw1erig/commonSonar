@@ -12,12 +12,13 @@ body {
   width: 100%;
   height: 100%;
   margin: auto;
-  font-family: 'Lato';
+  font-family: Helvetica, sans-serif;
   font-weight: 300;
   background: no-repeat url('../img/hintergrund.png');
-  background-size: 100% 100%;
-  background-position: 0% 0%;
-  margin: 0 auto;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .main {
@@ -27,16 +28,6 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-}
-
-.logo {
-  background: no-repeat url('../img/commonlogo3.png');
-  background-size: 100% 100%;
-  background-position: 0% 0%;
-  margin: 0 auto;
-  top: 0;
-  width: 60%;
-  height: 30%;
 }
 
 .chatbox {
@@ -49,14 +40,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  overflow-y: scroll;
 }
 
 .msg {
   margin-bottom: 1em;
   padding: 10px;
   border-radius: 5px;
-  height: 2em;
 }
 
 .chatbox > .left {
@@ -84,14 +73,17 @@ body {
 }
 
 .sendbtn {
-  height: 40%;
-  weight: 100%;
   padding: 8px 8px;
   background: #8950AC;
   font-size: 20px;
   border-radius: 19px;
   margin-bottom: 5%;
-  color: #FFFFFF;
+  color: black;
+}
+
+.sendbtn:hover {
+  background-color: #8950AC;
+  color: white;
 }
 
 img {
@@ -100,5 +92,5 @@ img {
   max-height:15%;
   width: auto;
   height: auto;
-  margin: 5% auto auto auto;
+  margin: 1% auto auto auto;
 }
