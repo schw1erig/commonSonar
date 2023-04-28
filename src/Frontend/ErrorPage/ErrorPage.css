@@ -1,0 +1,81 @@
+.item1 { grid-area: header; }
+.item2 { grid-area: main; }
+.item3 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'main main main main main main'
+    'footer footer footer footer footer footer';
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  background: no-repeat url('hintergrund.png');
+  background-size: 100% 100%;
+  background-position: 0% 0%;
+  margin: 0 auto;
+}
+
+img {
+    background: no-repeat url('commonlogo3.png');
+    background-size: 100% 100%;
+    background-position: 0% 0%;
+  display: block;
+  max-width:50%;
+  max-height:15%;
+  width: auto;
+  height: auto;
+  margin: 1% auto 0.3% auto;
+}
+
+h1 {
+    font-family: "Helvetica", Times;
+    font-size: 50px;
+    line-height: 77px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.button {
+    height: 40%;
+    weight: 100%;
+    padding: 15px 32px;
+    background: #8950AC;
+    font-size: 20px;
+    border-radius: 19px;
+    margin-bottom: 5%;
+}
+
+.button:hover {
+  background-color: #8950AC;
+  color: white;
+}
+.CardCenter {
+    display:inline-block;
+    width:auto
+}
+
+.Card {
+    box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+    width: 70%;
+    position: center;
+}
