@@ -11,18 +11,10 @@ body
     font-family: 'Lato';
     font-weight: 300;
     background: no-repeat url('../img/hintergrund.png');
-    background-size: 100% 100%;
-    background-position: 0% 0%;
-}
-
-.logo {
-    background: no-repeat url('../img/commonlogo3.png');
-    background-size: 100% 100%;
-    background-position: 0% 0%;
-    margin: 0 auto;
-    top: 0;
-    width: 60%;
-    height: 30%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .login{
@@ -83,4 +75,13 @@ a{
     border: none;
     border-radius: 3px;
     padding-left: 8px;
+}
+
+img {
+    display: block;
+    max-width:50%;
+    max-height:15%;
+    width: auto;
+    height: auto;
+    margin: 1% auto auto auto;
 }
