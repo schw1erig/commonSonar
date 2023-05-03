@@ -7,14 +7,13 @@ body
 {
     width: 100%;
     height: 100%;
-    margin: auto;
+    margin: 0 auto;
     font-family: 'Lato';
     font-weight: 300;
     background: no-repeat url('../img/hintergrund.png');
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .login{
@@ -48,7 +47,7 @@ label2{
 }
 
 #log{
-    margin-left: 16%;
+    margin-left: 12.5%;
     width: 65%;
     height: 30px;
     border: none;
@@ -57,7 +56,7 @@ label2{
     background: rgba(184, 17, 250, 0.397);
     color: white;
     font-weight: 600;
-    font-size: 1.2em;
+    font-size: 17px;
 }
 span{
     color: white;
@@ -69,7 +68,7 @@ a{
 }
 
 .fields{
-    margin-left: 15%;
+    margin-left: 12.5%;
     width: 65%;
     height: 30px;
     border: none;
@@ -84,4 +83,35 @@ img {
     width: auto;
     height: auto;
     margin: 1% auto auto auto;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    html {
+        font-size: calc(16px + 2 * ((100vw - 360px ) / 768));
+    }
+
+    img {
+        display: block;
+        max-width:100%;
+        max-height:100%;
+        width: auto;
+        height: auto;
+        margin: 5% auto 5% auto;
+    }
+
+    [class*="login"] {
+        width: 80%;
+        height: 60%;
+        font-size: 50px;
+    }
+
+    label {
+        margin-left: 12.5%;
+        font-size: 25px;
+    }
+
+    [class*="fields"] {
+        height: 40px;
+    }
 }
