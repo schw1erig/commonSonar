@@ -7,13 +7,12 @@ body
 {
     width: 100%;
     height: 100%;
-    margin: auto;
+    margin: 0 auto;
     font-family: 'Lato';
     font-weight: 300;
     background: no-repeat url('hintergrund.png');
     background-size: 100% 100%;
     background-position: 0% 0%;
-    margin: 0 auto;
 }
 
 .logo {
