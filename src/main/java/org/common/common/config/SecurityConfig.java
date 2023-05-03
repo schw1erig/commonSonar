@@ -41,7 +41,7 @@ public class SecurityConfig
 
         http.csrf().disable();
         http.authorizeRequests().antMatchers(GET,"/").permitAll();
-        //http.authorizeRequests().antMatchers(GET, "/homepage*").authenticated();
+        http.authorizeRequests().antMatchers(GET, "/homepage*").permitAll();
         http.authorizeRequests().antMatchers("/login*").permitAll();
         http.authorizeRequests().antMatchers("/register").permitAll();
         http.authorizeRequests().antMatchers(GET,"/unauthenticated/**").permitAll();

@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Welcome to Common Chat</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="unauthenticated/css/homepage.css">
+    <title>Common</title>
 </head>
 <body>
-<h1>This is some text</h1>
+<div id="logo" class="logo"></div>
+<div><a th:href="@{/login}|" class="button loginbutton">Log in</a></div>
+
+<div><a th:href="@{/register}|" class="button registerbutton">Create Account</a></div>
+
 </body>
 </html>
