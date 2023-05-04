@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
     <link rel="stylesheet" href="unauthenticated/css/homepage.css">
     <title>Common</title>
 </head>
+
 <body>
-<div id="logo" class="logo"></div>
-<div><a th:href="@{/login}|" class="button loginbutton">Log in</a></div>
-
-<div><a th:href="@{/register}|" class="button registerbutton">Create Account</a></div>
-
+<img src="unauthenticated/img/commonlogo3.png">
+<div class="main">
+    <h2>Welcome to COMMON!</h2>
+    <p>Here you have the opportunity to exchange ideas about a topic that interests you.</p>
+    <p>Just log in below or create an account if you're new here.</p>
+    <p><button class="button" th:onclick="|window.location.href='/login'|">Log in</button></p>
+    <p><button class="button" th:onclick="|window.location.href='/register'|">Register</button></p>
+</div>
 </body>
 </html>
