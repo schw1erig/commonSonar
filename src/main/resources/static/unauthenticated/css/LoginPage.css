@@ -54,6 +54,7 @@ label{
     border-radius: 19px;
     margin-bottom: 5%;
     color: black;
+    cursor: pointer;
 }
   
 #log:hover {
