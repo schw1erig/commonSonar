@@ -14,6 +14,7 @@ body
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
+    overflow: hidden;
 }
 
 .login{
@@ -47,15 +48,19 @@ label{
 #log{
     margin-left: 12.5%;
     width: 65%;
-    height: 30px;
-    border: none;
-    padding-left: 7px;
-    border-radius: 5px;
-    background: rgba(184, 17, 250, 0.397);
-    color: white;
-    font-weight: 600;
-    font-size: 17px;
+    padding: 8px 8px;
+    background: #8950AC;
+    font-size: 20px;
+    border-radius: 19px;
+    margin-bottom: 5%;
+    color: black;
 }
+  
+#log:hover {
+    background-color: #8950AC;
+    color: white;
+}
+
 span{
     color: white;
     font-size: 17px;
