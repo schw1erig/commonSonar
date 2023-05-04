@@ -36,10 +36,11 @@ body {
   padding: 30px 30px;
   border-radius: 50px;
   width: 60%;
-  max-height: 100%;
+  max-height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  overflow-y: hidden;
 }
 
 .msg {
@@ -79,6 +80,7 @@ body {
   border-radius: 19px;
   margin-bottom: 5%;
   color: black;
+  cursor: pointer;
 }
 
 .sendbtn:hover {
