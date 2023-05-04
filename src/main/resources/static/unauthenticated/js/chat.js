@@ -1,10 +1,12 @@
-var button = document.getElementById("sendButton");
-var stompClient = null;
+const button = document.getElementById("sendButton");
+let stompClient = null;
+const emojiRegex = /(:\)|;\)|:\(|:'\(|:D|:P|:O|:c)/g;
+
 
 button.addEventListener("click", sendMessage, true);
 
 function connect(event) {
-    var socket = new SockJS('/ws');
+    const socket = new SockJS('/ws');
     stompClient = Stomp.over(socket);
     stompClient.connect({}, onConnected, onError);
     event.preventDefault();
@@ -22,9 +24,10 @@ function onConnected() {
 }
 
 function sendMessage(event) {
-    var messageContent = document.getElementById("chatinput").value.trim();
+    const messageInput = document.getElementById("chatinput").value.trim();
+    const messageContent = emojiConverter(messageInput);
     if(messageContent && stompClient) {
-        var chatMessage = {
+        let chatMessage = {
             sender: username,
             content: messageContent,
             type: 'CHAT'
@@ -37,9 +40,9 @@ function sendMessage(event) {
 }
 
 function onMessageReceived(payload) {
-    var message = JSON.parse(payload.body);
+    const message = JSON.parse(payload.body);
 
-    var messageElement = document.createElement('div');
+    const messageElement = document.createElement('div');
 
     if(message.type === 'JOIN') {
         messageElement.classList.add('user-event', 'msg');
@@ -53,13 +56,13 @@ function onMessageReceived(payload) {
     else {
 
         messageElement.classList.add('left', 'msg');
-        var usernameElement = document.createElement('span');
-        var usernameText = document.createTextNode(message.sender);
+        const usernameElement = document.createElement('span');
+        const usernameText = document.createTextNode(message.sender);
         usernameElement.appendChild(usernameText);
         messageElement.appendChild(usernameElement);
     }
-    var textElement = document.createElement('p');
-    var messageText = document.createTextNode(message.content);
+    const textElement = document.createElement('p');
+    const messageText = document.createTextNode(message.content);
     textElement.appendChild(messageText);
 
     messageElement.appendChild(textElement);
@@ -67,5 +70,20 @@ function onMessageReceived(payload) {
 }
 
 function onError(error) {}
+
+function emojiConverter(text) {
+    const emojiMap = {
+        ":)": "😊",
+        ";)": "😉",
+        ":(": "😔",
+        ":'(": "😢",
+        ":D": "😀",
+        ":P": "😛",
+        ":O": "😲",
+        ":c": "☹️"
+    };
+    console.log(text.replace(emojiRegex, (match) => emojiMap[match]));
+    return text.replace(emojiRegex, (match) => emojiMap[match]);
+}
 
 window.onload = connect;
