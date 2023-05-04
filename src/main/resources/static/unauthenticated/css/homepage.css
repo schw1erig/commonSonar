@@ -15,7 +15,6 @@ body {
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
 img {
@@ -34,13 +33,12 @@ h2 {
 }
 
 .button {
-    position: center;
     padding: 1% 2%;
     background: #8950AC;
     border-radius: 19px;
     margin-bottom: 0.5%;
     height: 25%;
-    weight: 100%;
+    width: 25%;
     font-size: 18px;
     cursor: pointer;
 }
