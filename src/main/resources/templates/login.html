@@ -10,18 +10,22 @@
     <img src="unauthenticated/img/commonlogo3.png">
     <div class="login">
     <form id="login" method="post" th:action="@{/login}">
-        <label><b>Username:
-        </b>
-        </label>
-        <input class="fields" type="text" id="username" name="username" placeholder="Username">
-        <br><br>
-        <label><b>Password:
-        </b>
-        </label>
-        <input class="fields "type="Password" id="password" name="password" placeholder="Password">
-        <br><br>
-        <button class="log" id="log" type="submit">Come on!</button>
-        <br><br>
+        <div class="inputContainer">
+            <label>
+                <b>Username:</b>
+            </label>
+            <br>
+            <input class="fields" type="text" id="username" name="username" placeholder="Username">
+            <br><br>
+            <label>
+                <b>Password:</b>
+            </label>
+            <br>
+            <input class="fields "type="Password" id="password" name="password" placeholder="Password">
+            <br><br>
+            <button class="log" id="log" type="submit">Come on!</button>
+            <br><br>
+        </div>
     </form>
 </div>
 </body>

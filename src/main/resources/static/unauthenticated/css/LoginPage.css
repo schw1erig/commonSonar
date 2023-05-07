@@ -23,20 +23,20 @@ body
     margin: auto;
     padding: 80px;
     background: #bbb9bb2c;
-    border-radius: 15px ;
+    border-radius: 15px;
+    text-align: center;
 }
 
-label{
+label {
     background: rgba(184, 17, 250, 0.397);
     color: white;
     font-weight: 600;
     font-size: 17px;
     border-radius: 5px;
     padding: 1%;
-    margin-left: 40%;
 }
+
 .fields{
-    margin-left: 12.5%;
     width: 65%;
     height: 30px;
     border: none;
@@ -45,13 +45,11 @@ label{
 }
 
 #log{
-    margin-left: 12.5%;
     width: 65%;
     padding: 8px 8px;
     background: #8950AC;
     font-size: 20px;
     border-radius: 19px;
-    margin-bottom: 5%;
     color: black;
     cursor: pointer;
 }
@@ -59,15 +57,6 @@ label{
 #log:hover {
     background-color: #8950AC;
     color: white;
-}
-
-span{
-    color: white;
-    font-size: 17px;
-}
-a{
-    float: left;
-    background-color: grey;
 }
 
 img {
@@ -98,14 +87,26 @@ img {
         width: 80%;
         height: 60%;
         font-size: 30px;
+        text-align: left;
     }
 
     label {
-        margin-left: 12.5%;
         font-size: 25px;
     }
 
     [class*="fields"] {
         height: 40px;
+        width: 100%;
     }
+
+    [class*="inputContainer"] {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    #log {
+        width: 100%;
+    }
+
+
 }
