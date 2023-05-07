@@ -1,8 +1,5 @@
 pipeline {
     agent none
-    {
-
-        }
     stages {
         stage('Build Jar') {
             agent docker {
