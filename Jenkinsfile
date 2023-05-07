@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+            docker {
+                image 'maven:3.9.0-eclipse-temurin-18'
+                args '-v /root/.m2:/root/.m2'
+            }
+        }
     stages {
         stage('Test') {
                     steps {
@@ -9,15 +14,6 @@ pipeline {
         stage('Build Image') {
             steps {
                 sh 'docker build -t common:latest .'
-            }
-        }
-        stage('Push Image') {
-            steps {
-                withCredentials([usernamePassword(credentialsId: 'docker-registry-credentials', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
-            sh 'docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}'
-            sh 'docker tag common:latest darkress/common:latest'
-            sh 'docker push darkress/common:latest'
-                }
             }
         }
     }
