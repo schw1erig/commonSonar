@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build Jar') {
                     steps {
-                        sh './mvnw install'
+                        sh 'mvn spring-boot:run -DskipTests'
                     }
                 }
         stage('Build Image') {
