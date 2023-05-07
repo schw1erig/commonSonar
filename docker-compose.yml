@@ -7,6 +7,8 @@ services:
     networks:
       default:
     container_name: common
+    environment:
+      - spring_datasource_url=jdbc:mysql://localhost:3306/common
   mysql:
     image: mariadb:10.5.13
     container_name: mysql
