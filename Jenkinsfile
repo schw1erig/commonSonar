@@ -8,12 +8,8 @@ pipeline {
                     args '-v /root/.m2:/root/.m2'
                 }
             }
-            stages {
-                stage('Build') {
-                    steps {
-                        sh 'mvn spring-boot:run -DskipTests'
-                    }
-                }
+            steps {
+                sh 'mvn spring-boot:run -DskipTests'
             }
         }
         stage('Build Image') {
