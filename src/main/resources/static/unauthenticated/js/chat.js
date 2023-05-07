@@ -1,6 +1,8 @@
 const button = document.getElementById("sendButton");
+const chatBox = document.getElementById("chatbox");
 let stompClient = null;
 const emojiRegex = /(:\)|;\)|:\(|:'\(|:D|:P|:O|:c)/g;
+let scrolled = false;
 
 
 button.addEventListener("click", sendMessage, true);
@@ -26,6 +28,7 @@ function onConnected() {
 function sendMessage(event) {
     const messageInput = document.getElementById("chatinput").value.trim();
     const messageContent = emojiConverter(messageInput);
+    const messageElement = document.createElement('div');
     if(messageContent && stompClient) {
         let chatMessage = {
             sender: username,
@@ -34,7 +37,13 @@ function sendMessage(event) {
         };
         stompClient.send("/app/chat.sendMessage", {}, JSON.stringify(chatMessage));
         document.getElementById('chatinput').value = '';
-        document.getElementById('chatbox').innerHTML += "<div class='msg right'>" + messageContent + '</div>';
+        messageElement.classList.add('right', 'msg');
+        const textElement = document.createElement('p');
+        const messageText = document.createTextNode(messageContent);
+        textElement.appendChild(messageText);
+        messageElement.appendChild(textElement);
+        scrolled = false;
+        document.getElementById('chatbox').appendChild(messageElement);
     }
     event.preventDefault();
 }
@@ -51,12 +60,12 @@ function onMessageReceived(payload) {
         messageElement.classList.add('user-event', 'msg');
         message.content = message.sender + ' left!';
     } else if (message.sender === username) {
+        scrollToNew();
         return;
     }
     else {
-
         messageElement.classList.add('left', 'msg');
-        const usernameElement = document.createElement('span');
+        const usernameElement = document.createElement('p');
         const usernameText = document.createTextNode(message.sender);
         usernameElement.appendChild(usernameText);
         messageElement.appendChild(usernameElement);
@@ -64,9 +73,10 @@ function onMessageReceived(payload) {
     const textElement = document.createElement('p');
     const messageText = document.createTextNode(message.content);
     textElement.appendChild(messageText);
-
     messageElement.appendChild(textElement);
+    setScroll();
     document.getElementById('chatbox').appendChild(messageElement);
+    scrollToNew();
 }
 
 function onError(error) {}
@@ -82,8 +92,27 @@ function emojiConverter(text) {
         ":O": "😲",
         ":c": "☹️"
     };
-    console.log(text.replace(emojiRegex, (match) => emojiMap[match]));
     return text.replace(emojiRegex, (match) => emojiMap[match]);
+}
+
+chatBox.addEventListener("scroll", setScroll)
+
+function setScroll() {
+    console.log(scrolled)
+    console.log(chatBox.clientHeight + chatBox.scrollTop);
+    console.log(chatBox.scrollHeight);
+    if ((chatBox.clientHeight + chatBox.scrollTop) === chatBox.scrollHeight) {
+        scrolled = false;
+    }
+    else {
+        scrolled = true;
+    }
+}
+
+function scrollToNew() {
+    if(!scrolled) {
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
 }
 
 window.onload = connect;
