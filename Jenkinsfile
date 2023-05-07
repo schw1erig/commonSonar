@@ -16,8 +16,8 @@ pipeline {
                 }
                 stage('Test') {
                     steps {
-                        sh 'export spring.datasource.url=jdbc:mysql://localhost:3306/common'
-                        sh 'mvn spring-boot:run -e '
+                        sh 'export spring_datasource_url=jdbc:mysql://localhost:3306/common'
+                        sh 'mvn test'
                     }
                 }
             }
