@@ -8,8 +8,17 @@ pipeline {
                     args '-v /root/.m2:/root/.m2'
                 }
             }
-            steps {
-                sh 'mvn spring-boot:run -DskipTests'
+            stages {
+                stage('Build') {
+                    steps {
+                        sh 'mvn spring-boot:run -DskipTests'
+                    }
+                }
+                stage('Test') {
+                    steps {
+                        sh 'mvn spring-boot:run -e spring.datasource.url=jdbc:mysql://localhost:3306/common'
+                    }
+                }
             }
         }
         stage('Build Image') {
