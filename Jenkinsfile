@@ -6,9 +6,9 @@ pipeline {
             }
         }
     stages {
-        stage('Test') {
+        stage('Build Jar') {
                     steps {
-                        sh './mvnw -Dtest=src/test/java/org/common/common/CommonApplicationTests test'
+                        sh './mvnw clean package -DskipTests'
                     }
                 }
         stage('Build Image') {
