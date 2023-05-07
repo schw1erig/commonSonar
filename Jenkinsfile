@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build Jar') {
                     steps {
-                        sh './mvnw clean package -DskipTests'
+                        sh './mvnw install'
                     }
                 }
         stage('Build Image') {
