@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('Test') {
+                    steps {
+                        sh './mvnw -Dtest=src/test/java/org/common/common/CommonApplicationTests test'
+                    }
+                }
         stage('Build Image') {
             steps {
                 sh 'docker build -t common:latest .'
