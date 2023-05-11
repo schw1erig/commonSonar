@@ -20,23 +20,22 @@ body
 .login{
     width: 50%;
     overflow: hidden;
-    margin: auto;
+    margin: 0 auto;
     padding: 80px;
     background: #bbb9bb2c;
     border-radius: 15px ;
+    text-align: center;
 }
 
 label{
-    background: rgba(184, 17, 250, 0.397);
+    background: #8950AC;
     color: white;
-    font-weight: 600;
     font-size: 17px;
     border-radius: 5px;
     padding: 1%;
-    margin-left: 40%;
 }
+
 .fields{
-    margin-left: 12.5%;
     width: 65%;
     height: 30px;
     border: none;
@@ -45,20 +44,19 @@ label{
 }
 
 #log{
-    margin-left: 12.5%;
-    width: 65%;
     padding: 8px 8px;
     background: #8950AC;
     font-size: 20px;
     border-radius: 19px;
     margin-bottom: 5%;
-    color: black;
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
   
 #log:hover {
-    background-color: #8950AC;
+    background: #61357c;
     color: white;
+
 }
 
 span{
@@ -79,33 +77,3 @@ img {
     margin: 1% auto auto auto;
 }
 
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    html {
-        font-size: calc(16px + 2 * ((100vw - 360px ) / 768));
-    }
-
-    img {
-        display: block;
-        max-width:100%;
-        max-height:100%;
-        width: auto;
-        height: auto;
-        margin: 5% auto 5% auto;
-    }
-
-    [class*="login"] {
-        width: 80%;
-        height: 60%;
-        font-size: 30px;
-    }
-
-    label {
-        margin-left: 12.5%;
-        font-size: 25px;
-    }
-
-    [class*="fields"] {
-        height: 40px;
-    }
-}
