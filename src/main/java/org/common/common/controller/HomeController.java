@@ -22,13 +22,28 @@ public class HomeController
         return "homepage";
     }
 
-    @RequestMapping(value="/chatPortal", method= RequestMethod.GET)
-    public String chat(@ModelAttribute("user") ApplicationUser user, Model model) {
-        return "chat";
-    }
 
     @RequestMapping(value="/register", method= RequestMethod.GET)
     public String register() {
         return "register";
     }
+
+
+    @RequestMapping(value="/chooseTopic", method= RequestMethod.GET)
+    public String choose(Model model) {
+        model.addAttribute("topic", new String());
+        return "TopicPage";
+    }
+    @RequestMapping(value="/chatPortal", method= RequestMethod.GET)
+    public String chat(@ModelAttribute("user") ApplicationUser user,  Model model) {
+        return "chat";
+    }
+
+    @RequestMapping(value="/chatPortal/matchmaking", method=RequestMethod.POST)
+    public String matchmaking(@ModelAttribute String topic, Model model){
+        model.addAttribute("topic", topic);
+        return "redirect:/chatPortal";
+    }
+
+
 }

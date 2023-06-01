@@ -5,6 +5,7 @@ const emojiRegex = /(:\)|;\)|:\(|:'\(|:D|:P|:O|:c)/g;
 let scrolled = false;
 
 
+
 button.addEventListener("click", sendMessage, true);
 
 function connect(event) {
@@ -16,7 +17,7 @@ function connect(event) {
 
 function onConnected() {
     // Subscribe to the Public Topic
-    stompClient.subscribe('/topic/public', onMessageReceived);
+    stompClient.subscribe('/topic/'+topic, onMessageReceived);
 
     // Tell your username to the server
     stompClient.send("/app/chat.addUser",
