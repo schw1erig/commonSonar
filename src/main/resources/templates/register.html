@@ -2,27 +2,33 @@
 <html>
 <head>
     <title>Register Form</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/unauthenticated/css/register.css">
+ <link rel="stylesheet" href="unauthenticated/css/register.css">
 </head>
 <body>
-<img src="/unauthenticated/img/commonlogo3.png"/>
+<img src="unauthenticated/img/commonlogo3.png"/>
+<div class="navigation">
+        <ul>
+            <li><a class="active" href="">register</a></li>
+            <li><a href="">homepage</a></li>
+            <li><a href="">settings</a></li>
+        </ul>
+    </div>
 <div class="login">
     <form id="login" onsubmit="sendCredentials()">
-        <label><b>Username:
+        <label><b>Username
         </b>
         </label>
-        <input class="fields" type="text" id="username" name="username" placeholder="Username">
+        <input class="fields" type="text" id="username" name="username" placeholder="Enter Username">
         <br><br>
-        <label><b>Email:
+        <label><b>Email
         </b>
         </label>
-        <input class="fields" type="text" name="Mail" id="email" placeholder="Email">
+        <input class="fields" type="text" name="Mail" id="email" placeholder="Enter Email">
         <br><br>
-        <label><b>Password:
+        <label><b>Password
         </b>
         </label>
-        <input class="fields" type="Password" id="password" name="password" placeholder="Password">
+        <input class="fields" type="Password" id="password" name="password" placeholder="Enter Password">
         <br><br>
         <button class="log" id="log" type="button">Come on!</button>
         <br><br>

@@ -17,14 +17,56 @@ body
     overflow: hidden;
 }
 
+.navigation {
+   display: block;
+   margin: 1%;
+   margin-left: auto;
+   margin-right: auto;
+   background: rgba(255, 255, 255, 0.2);
+   height: 34px;
+   width: 80%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+li{
+    float:left;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #8950AC;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
 .login{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 50%;
     overflow: hidden;
-    margin: 0 auto;
-    padding: 80px;
-    background: #bbb9bb2c;
+    padding: 1%;
+    padding-top: 5%;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 15px ;
     text-align: center;
+    box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
 }
 
 label{
@@ -55,17 +97,6 @@ label{
   
 #log:hover {
     background: #61357c;
-    color: white;
-
-}
-
-span{
-    color: white;
-    font-size: 17px;
-}
-a{
-    float: left;
-    background-color: grey;
 }
 
 img {
@@ -76,4 +107,3 @@ img {
     height: auto;
     margin: 1% auto auto auto;
 }
-

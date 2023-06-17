@@ -1,23 +1,57 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 html {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 body {
   width: 100%;
   height: 100%;
   margin: auto;
-  font-family: Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 300;
   background: no-repeat url('../img/hintergrund.png');
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
+  overflow: hidden;
+}
+
+.navigation {
+   display: block;
+   margin: 1%;
+   margin-left: auto;
+   margin-right: auto;
+   background: rgba(255, 255, 255, 0.2);
+   height: 34px;
+   width: 80%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+li{
+    float:left;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #8950AC;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
 }
 
 .main {
@@ -95,18 +129,17 @@ body {
 }
 
 .sendbtn {
-  padding: 8px 8px;
-  background: #8950AC;
-  font-size: 20px;
-  border-radius: 19px;
-  margin-bottom: 5%;
-  color: black;
-  cursor: pointer;
+    padding: 8px 8px;
+    background: #8950AC;
+    font-size: 20px;
+    border-radius: 19px;
+    margin-bottom: 5%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .sendbtn:hover {
   background-color: #8950AC;
-  color: white;
 }
 
 img {

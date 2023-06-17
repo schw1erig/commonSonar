@@ -1,20 +1,20 @@
 html {
     height: 100%;
     width: 100%;
-    overflow: hidden;
 }
 
 body {
+    font-size: 15px;
     width: 100%;
     height: 100%;
     margin: auto;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 100;
-    font-size: 15px;
+    font-weight: 300;
     background: no-repeat url('../img/hintergrund.png');
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
+    overflow: hidden;
 }
 
 img {
@@ -26,35 +26,37 @@ img {
     margin: 1% auto 0.3% auto;
 }
 
-h2 {
-    font-size: 20px;
-    line-height: 40px;
+h1 {
+    font-size: 30px;
+    line-height: 77px;
     text-align: center;
+    color: #FFFFFF;
 }
 
 .button {
-    padding: 1% 2%;
+    padding: 8px 8px;
     background: #8950AC;
+    font-size: 20px;
     border-radius: 19px;
-    margin-bottom: 0.5%;
-    height: 25%;
-    width: 25%;
-    font-size: 18px;
+    margin-bottom: 2%;
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
 .button:hover {
     background-color: #8950AC;
-    color: white;
 }
 
 .main{
-    margin: auto;
-    width: 60%;
-    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    width: 50%;
+    padding: 1%;
     text-align: center;
     max-height: 100%;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
     box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
 }
