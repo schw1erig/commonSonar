@@ -57,33 +57,26 @@ li a:hover:not(.active) {
 .main {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
 }
 
 .outerchatbox{
-  margin: 0 auto;
   border-radius: 30px;
-  width: 60%;
-  max-height: 80%;
+  width: 100%;
+  height: 60%;
   overflow: hidden;
-  padding-bottom: 20px;
 }
 
 .chatbox {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   background: rgba(255, 255, 255, 0.6);
-  margin: 0 auto;
-  border-radius: 29px;
-  width: 96%;
-  max-height: 100%;
-  padding: 2%;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
+  border-radius: 15px;
+  width: 70%;
+  height: 98%;
+  overflow-y: scroll;
 }
-
+/*
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -97,7 +90,7 @@ li a:hover:not(.active) {
   background: #8950AC;
   border-radius: 10px;
 }
-
+*/
 .msg {
   margin-bottom: 1em;
   padding: 10px;
